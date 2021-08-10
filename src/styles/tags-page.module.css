@@ -30,6 +30,12 @@
     margin: 4px;
 }
 
+/* tagpost */
+
+.tagText {
+    margin-bottom: 10px;
+}
+
 .tagPage {
     margin: 2px;
     font-size: 10px;

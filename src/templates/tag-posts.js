@@ -13,13 +13,13 @@ export default function tagPosts({ data, pageContext }) {
    const count = data.allMarkdownRemark.totalCount
     return (
         <Layout>
-            <h1>{ tag } posts: { count }</h1>
+            <h1>{ tag.toUpperCase() } posts - { count }</h1>
             {
               posts.map(({ node }) => (
-                <div key={ node.id } >
+                <div key={ node.id }>
                   <Link to={`/${ node.fields.slug }`}>
                    <h2> { node.frontmatter.title } </h2>
-                   <p>{ node.frontmatter.date }</p>
+                   <p className={styles.tagText}>{ node.frontmatter.date }</p>
                   </Link>
                   
                   

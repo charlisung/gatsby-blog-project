@@ -3,6 +3,7 @@
     line-height: 1.5;
     margin-bottom: 1rem;
     color: #343A40;
+    padding: 20px 0;
 }
 
 .container {
@@ -33,4 +34,5 @@
     border: none;
     margin: 0 5px;
     padding: 3px 6px;
+    border-radius: 4px;
 }
