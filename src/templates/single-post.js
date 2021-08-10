@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
-import * as styles from '../styles/blog-post.module.css'
+import * as styles from '../styles/single-post.module.css'
 import { graphql, Link } from 'gatsby'
 import Img from "gatsby-image"
 import { getSlug } from "../func/getSlug"
@@ -19,9 +19,15 @@ export default function allPostsDetail({ data, pageContext }) {
           <h2>{title}</h2>
           <p>{date}</p>
         </div>
-        <div className={styles.featured}>
-            <Img fluid={featuredImg.childImageSharp.fluid} />
-          </div>
+
+        {/* need to figure out featured image... */}
+        {/* <div className={styles.featured}>
+            {
+              featuredImg.childImageSharp.fluid && (
+                <Img fluid={featuredImg.childImageSharp.fluid} />
+              )
+            }
+          </div> */}
           <div className={styles.container} dangerouslySetInnerHTML={{ __html: html }} />
           <div className={styles.tags}>
             <FaTag />
