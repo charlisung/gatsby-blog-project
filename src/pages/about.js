@@ -19,7 +19,7 @@ export default function About() {
         <Layout>
             <div className={styles.card}>
             <StaticImage src="../images/mickey_dino.png"></StaticImage>
-            <div class={`${styles.bubble} ${styles.tail}`}>Hi, my name is Mickey. <br/> I'm a fennec fox.</div>
+            <div class={`${styles.bubble} ${styles.tail}`}>Hi, my name is Mickey. <br/> I'm a fennec fox. Not a dinosaur!</div>
             <br/>
              </div>
              <div className={styles.resume}>
