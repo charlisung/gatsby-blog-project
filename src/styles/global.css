@@ -93,6 +93,12 @@ section.contents {
     padding: 120px 20px 20px 20px;
 }
 
+.footer {
+    text-align: center;
+    color: var(--gray);
+    margin-bottom: 10px;
+}
+
 @media screen and (min-width: 620px) {
     .container {
         display: flex;

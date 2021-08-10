@@ -9,9 +9,9 @@ export default function Layout({ children }) {
             <section className="contents">
                 { children }
             </section>
-            {/* <footer>
+            <footer className="footer">
                 <p>2021 © SLP 🔔</p>
-            </footer> */}
+            </footer>
         </div>
     )
 }

@@ -1,6 +1,5 @@
 ---
 title: The Drum Stop
-tags: ["Html", "Css", "Javascript"]
 post: "project"
 date: 2021-01-18T00:00:00+00:00
 thumb: ../images/rethumbs/drums.png
