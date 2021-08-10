@@ -1,16 +1,17 @@
 import React from 'react'
 import Navbar from './Navbar'
+import '../styles/global.css'
 
 export default function Layout({ children }) {
     return (
         <div>
             <Navbar />
-            <section className="contents">
+            <section className="grid contents">
                 { children }
             </section>
-            <footer>
+            {/* <footer>
                 <p>2021 © SLP 🔔</p>
-            </footer>
+            </footer> */}
         </div>
     )
 }
