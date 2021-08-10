@@ -6,7 +6,7 @@ export default function Layout({ children }) {
     return (
         <div>
             <Navbar />
-            <section className="grid contents">
+            <section className="contents">
                 { children }
             </section>
             {/* <footer>
