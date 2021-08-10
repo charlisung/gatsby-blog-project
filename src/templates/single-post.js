@@ -2,7 +2,6 @@ import React from "react"
 import Layout from "../components/Layout"
 import * as styles from '../styles/single-post.module.css'
 import { graphql, Link } from 'gatsby'
-import Img from "gatsby-image"
 import { getSlug } from "../func/getSlug"
 import { FaTag } from "react-icons/fa"
 
@@ -10,7 +9,7 @@ import { FaTag } from "react-icons/fa"
 export default function allPostsDetail({ data, pageContext }) {
     
     const { html, id } = data.markdownRemark
-    const { title, featuredImg, tags, date } = data.markdownRemark.frontmatter
+    const { title, tags, date } = data.markdownRemark.frontmatter
    
     return (
       <Layout className="blog-post">
