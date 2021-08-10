@@ -4,7 +4,7 @@ import '../styles/global.css'
 
 export default function Layout({ children }) {
     return (
-        <div>
+        <div className="layout">
             <Navbar />
             <section className="contents">
                 { children }
