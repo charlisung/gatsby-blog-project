@@ -35,3 +35,25 @@ padding: .75rem 1rem;
 box-shadow: 5px 5px #1B1D25;
 cursor: pointer;
 }
+
+section .newPosts {
+    
+    margin-top: 50px;
+}
+
+.newPost {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.newPost:hover {
+    border-right: 1px solid #35a353;
+}
+
+.newPost .thumbnail {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+

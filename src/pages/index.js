@@ -2,10 +2,13 @@ import React from "react"
 import Layout from "../components/Layout"
 import * as styles from '../styles/home.module.css'
 import { StaticImage } from "gatsby-plugin-image"
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
+import Img from "gatsby-image"
 
 
-export default function Home() {
+
+export default function Home({ data }) {
+  const newPosts = data.allMarkdownRemark.edges
   return (
     <Layout>
       <div className={styles.home}>
@@ -18,6 +21,47 @@ export default function Home() {
         <Link to="/about" className={styles.about__btn}>More about me</Link>
         </div>
       </div>
+      <section className={styles.newPosts}>
+      <h3>New Articles</h3>
+        {
+          newPosts.map(({ node }) => {
+           
+            return (
+              
+                
+              <Link to={`/${node.fields.slug}/`} key={ node.id } className={styles.newPost}>
+                 <Img fluid={ node.frontmatter.thumb.childImageSharp.fluid } className={styles.thumbnail} />
+                <p> { node.frontmatter.title } </p>
+              </Link>
+            
+            )
+          })
+        }
+      </section>
     </Layout>
   )
 }
+export const query = graphql`
+query NewPosting {
+    allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, limit: 3) {
+      edges {
+        node {
+          frontmatter {
+            title
+            thumb {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          id
+          fields {
+                      slug
+          }
+        }
+      }
+    }
+  }
+`
