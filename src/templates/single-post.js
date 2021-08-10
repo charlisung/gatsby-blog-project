@@ -4,13 +4,15 @@ import * as styles from '../styles/single-post.module.css'
 import { graphql, Link } from 'gatsby'
 import { getSlug } from "../func/getSlug"
 import { FaTag } from "react-icons/fa"
+import ReactDisqusComments from 'react-disqus-comments';
+import LazyLoad from 'react-lazy-load';
 
 
 export default function allPostsDetail({ data, pageContext }) {
     
     const { html, id } = data.markdownRemark
     const { title, tags, date } = data.markdownRemark.frontmatter
-   
+    const post = data.markdownRemark.frontmatter
     return (
       <Layout className="blog-post">
 
@@ -39,7 +41,15 @@ export default function allPostsDetail({ data, pageContext }) {
             }
           </div>
          
-
+          <LazyLoad offsetTop={600}>
+              <ReactDisqusComments
+                  shortname="charligatsby"
+                  identifier={post.id}
+                  title={post.title}
+                  url={post.url}
+              />
+            </LazyLoad>
+           
       </Layout>
     )
 }

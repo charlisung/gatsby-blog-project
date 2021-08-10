@@ -16,16 +16,20 @@
   "dependencies": {
     "gatsby": "^3.11.0",
     "gatsby-image": "^3.11.0",
+    "gatsby-plugin-disqus": "^1.2.2",
     "gatsby-plugin-image": "^1.11.0",
     "gatsby-plugin-lodash": "^4.11.0",
     "gatsby-plugin-sharp": "^3.11.0",
+    "gatsby-remark-lazy-load": "^1.0.2",
     "gatsby-source-filesystem": "^3.11.0",
     "gatsby-transformer-remark": "^4.8.0",
     "gatsby-transformer-sharp": "^3.11.0",
     "lodash": "^4.17.21",
     "react": "^17.0.1",
+    "react-disqus-comments": "^1.4.0",
     "react-dom": "^17.0.1",
-    "react-icons": "^4.2.0"
+    "react-icons": "^4.2.0",
+    "react-lazy-load": "^3.1.13"
   },
   "devDependencies": {
     "prettier": "2.3.2"

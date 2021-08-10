@@ -40,5 +40,11 @@ module.exports = {
       },
     },
     `gatsby-plugin-lodash`,
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+          shortname: `slpgatsby`
+      }
+  },
   ],
 }
