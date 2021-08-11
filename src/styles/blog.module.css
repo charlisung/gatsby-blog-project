@@ -1,45 +1,45 @@
 .card {
-    display: flex;
-    align-items: center;
-    margin-bottom: 2rem;
-    color: #343A40;
-    padding: 0 10px;
-    border-left: 1px solid white;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  color: #343a40;
+  padding: 0 10px;
+  border-left: 1px solid white;
 }
 
 .card p {
-    color: rgb(98, 95, 95);
-    margin-top: 4px;
+  color: rgb(98, 95, 95);
+  margin-top: 4px;
 }
 
 .card h3 {
-    font-weight: 500;
+  font-weight: 500;
 }
 
-.card:hover  {
-    border-left: 1px solid #35A354;
+.card:hover {
+  border-left: 1px solid #35a354;
 }
 .thumbnail {
-    width: 100px;
-    height: 100px;
-    margin-right: 2rem;
+  width: 100px;
+  height: 100px;
+  margin-right: 2rem;
 }
 
 .categories {
-    text-align: center;
-    margin: 50px 0;
+  text-align: center;
+  margin: 50px 0;
 }
 
 button {
-    outline: 0;
-    border: none;
-    font-size: 1rem;
-    margin: 4px 8px;
-    padding: 6px 12px;
-    color: white;
-    background-color: #35A354;;
+  outline: 0;
+  border: none;
+  font-size: 1rem;
+  margin: 4px 8px;
+  padding: 6px 12px;
+  color: white;
+  background-color: #35a354;
 }
 
 button:hover {
-    box-shadow: 5px 5px #1B1D25;
+  box-shadow: 5px 5px #1b1d25;
 }

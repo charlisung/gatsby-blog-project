@@ -1,47 +1,47 @@
 .tagsPage ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .tagsPage li {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .badge {
-    font-size: 14px;
-    padding: 6px 12px;
-    line-height: 1.42857143;
-    border-radius: 12px;
-    text-transform: uppercase;
-    text-align: center;
-    border: 1px solid #eee;
-    margin: 4px;
+  font-size: 14px;
+  padding: 6px 12px;
+  line-height: 1.42857143;
+  border-radius: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid #eee;
+  margin: 4px;
 }
 
 .badge:hover {
-    font-size: 14px;
-    padding: 6px 12px;
-    line-height: 1.42857143;
-    border-radius: 12px;
-    text-transform: uppercase;
-    text-align: center;
-    border: 1px solid #35A354;
-    margin: 4px;
+  font-size: 14px;
+  padding: 6px 12px;
+  line-height: 1.42857143;
+  border-radius: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid #35a354;
+  margin: 4px;
 }
 
 /* tagpost */
 
 .tagText {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .tagPage {
-    margin: 2px;
-    font-size: 10px;
-    padding: 6px 12px;
-    line-height: 1.42857143;
-    border-radius: 4px;
-    text-transform: uppercase;
-    text-align: center;
+  margin: 2px;
+  font-size: 10px;
+  padding: 6px 12px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  text-transform: uppercase;
+  text-align: center;
 }

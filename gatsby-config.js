@@ -43,8 +43,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
-          shortname: `slpgatsby`
-      }
-  },
+        shortname: `slpgatsby`,
+      },
+    },
   ],
 }

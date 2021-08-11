@@ -1,85 +1,80 @@
 /* Mobile version */
 
 .home {
-    text-align: center;
-    padding: 30px 0;
+  text-align: center;
+  padding: 30px 0;
 }
 
-/* 
-.profile {
-    add fancy border later
-} */
-
 .home h2 {
-    color: #35a353;
+  color: #35a353;
 }
 
 .profile__img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50px;
-    margin: 20px 0 10px 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 50px;
+  margin: 20px 0 10px 0;
 }
 
 .profile__text {
-    font-size: 1.2em;
-    line-height: 2;
-    margin-bottom: 30px;
+  font-size: 1.2em;
+  line-height: 2;
+  margin-bottom: 30px;
 }
 
 div .about__btn {
-    background-color: #35a353;
-    color: white;
-    font-size: 1.2rem;
-    text-align: center;
-    padding: .75rem 1rem;
-    box-shadow: 5px 5px #1B1D25;
-    cursor: pointer;
+  background-color: #35a353;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  box-shadow: 5px 5px #1b1d25;
+  cursor: pointer;
 }
 
 section .newPosts {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .newPost {
-    display: flex;
-    align-items: center;
-    margin: 20px;
+  display: flex;
+  align-items: center;
+  margin: 20px;
 }
 
 .newPost:hover {
-    border-right: 1px solid #35a353;
+  border-right: 1px solid #35a353;
 }
 
 .newPost .thumbnail {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
 }
 
 @media screen and (min-width: 620px) {
-    .home h2 {
-        font-size: 1.5rem;
-    }
-    .profile__img {
-        width: 250px;
-        height: 250px;
-        border-radius: 50%;
-        margin: 20px 0 10px 0;
-    }
+  .home h2 {
+    font-size: 1.5rem;
+  }
+  .profile__img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 20px 0 10px 0;
+  }
 }
 
 @media screen and (min-width: 960px) {
-    section .newPosts {
-        margin-left: 50px;
-        font-size: 1.2rem;
-    }
+  section .newPosts {
+    margin-left: 50px;
+    font-size: 1.2rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-    .container {
-        font-size: 1.6rem;
-        padding: 0 140px;
-        margin: 0 200px;
-    }
+  .container {
+    font-size: 1.6rem;
+    padding: 0 140px;
+    margin: 0 200px;
+  }
 }

@@ -1,38 +1,38 @@
 .title {
-    text-align: center;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-    color: #343A40;
-    padding: 20px 0;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: #343a40;
+  padding: 20px 0;
 }
 
 .container {
-    padding: 1rem 1.8rem;
-    line-height: 2.0;
-    text-align: justify-all;
-    color: #343A40;
+  padding: 1rem 1.8rem;
+  line-height: 2;
+  text-align: justify-all;
+  color: #343a40;
 }
 
 .container h3 {
-    margin: 2rem 0 1.4rem 0;
+  margin: 2rem 0 1.4rem 0;
 }
 .featured {
-    margin: 40px 0;
-  }
+  margin: 40px 0;
+}
 
 .container a {
-    color: red;
-    text-decoration: underline;
+  color: red;
+  text-decoration: underline;
 }
 
 .tags {
-    margin-left: 30px;
-    margin-bottom: 50px;
+  margin-left: 30px;
+  margin-bottom: 50px;
 }
 
 .tag {
-    border: none;
-    margin: 0 5px;
-    padding: 3px 6px;
-    border-radius: 4px;
+  border: none;
+  margin: 0 5px;
+  padding: 3px 6px;
+  border-radius: 4px;
 }

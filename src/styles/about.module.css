@@ -1,39 +1,38 @@
 .card {
-    display: flex;
-    padding-top: 50px;
+  display: flex;
+  padding-top: 50px;
 }
 
 .bubble {
-    position: relative;
-    font-size: 1.4rem;
-    letter-spacing: 1.2px;
-    width: 300px;
-    height: 150px;
-    background: #35a353;
-    box-shadow: 5px 5px #1B1D25;
-    /* border-radius: 40px; */
-    padding: 24px;
-    text-align: center;
-    color: white;
-    margin-top: 2rem;
-    margin-left: -2rem;
-  }
-  
+  position: relative;
+  font-size: 1.4rem;
+  letter-spacing: 1.2px;
+  width: 300px;
+  height: 150px;
+  background: #35a353;
+  box-shadow: 5px 5px #1b1d25;
+  /* border-radius: 40px; */
+  padding: 24px;
+  text-align: center;
+  color: white;
+  margin-top: 2rem;
+  margin-left: -2rem;
+}
+
 .tail:before {
-    content: "";
-    width: 0px;
-    height: 0px;
-    position: absolute;
-    border-left: 24px solid #35a353;
-    border-right: 12px solid transparent;
-    border-top: 12px solid #35a353;
-    border-bottom: 20px solid transparent;
-    left: 32px;
-    bottom: -24px;
-  }
-  
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 24px solid #35a353;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #35a353;
+  border-bottom: 20px solid transparent;
+  left: 32px;
+  bottom: -24px;
+}
 
 .resume {
-    line-height: 2;
-    font-size: 1.2rem;
+  line-height: 2;
+  font-size: 1.2rem;
 }
