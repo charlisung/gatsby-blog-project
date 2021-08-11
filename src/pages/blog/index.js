@@ -1,12 +1,52 @@
-import { graphql } from "gatsby"
-import React from "react"
+import { graphql, Link } from "gatsby"
+import React, { useState } from "react"
 import Layout from "../../components/Layout"
-import BlogItems from "../../templates/blog-posts-page"
+// import BlogItems from "../../templates/blog-posts-page"
 
 const Blog = ({ data }) => {
+  const allPosts = data.allMarkdownRemark.edges
+
+  const getCategories = items => {
+    let categoryItems = items.map(item => {
+      return item.node.frontmatter.category
+    })
+    let uniqueCategories = new Set(categoryItems)
+    let categories = Array.from(uniqueCategories)
+    categories = ["All posts", ...categories]
+    return categories
+  }
+
+  const categories = getCategories(allPosts)
+
+  const [category, setCategory] = useState("All posts")
+
+  const handleClick = category => setCategory(category)
+
+  const posts =
+    category === "All posts"
+      ? allPosts
+      : allPosts.filter(post => post.node.frontmatter.category === category)
+
   return (
     <Layout>
-      <BlogItems items={data} />
+      h3llo
+      {categories.map((category, i) => {
+        return (
+          <button type="button" key={i} onClick={() => handleClick(category)}>
+            {category}
+          </button>
+        )
+      })}
+      <div>
+        {posts.map((post, i) => {
+          return (
+            <Link key={i}>
+              <div>{post.node.frontmatter.title}</div>
+            </Link>
+          )
+        })}
+      </div>
+      {/* <BlogItems items={data} /> */}
     </Layout>
   )
 }
