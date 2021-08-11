@@ -16,41 +16,29 @@ const Blog = ({ data }) => {
     return categories
   }
 
-  const [categories, setCategories] = useState(getCategories(allPosts))
-  const [state, setState] = {
-    items: data.allMarkdownRemark.edges,
-    blogPostItems: data.allMarkdownRemark.edges,
-    categories: getCategories(data.allMarkdownRemark.edges),
-  }
+  const categories = getCategories(allPosts)
 
-  const handleClick = category => {
-    if (category === "All posts") {
-      setState({
-        blogPostItems: [...data.allMarkdownRemark.edges],
-      })
-    } else {
-      setState({
-        blogPostItems: [
-          data.allMarkdownRemark.edges.fiter(edge => {
-            return edge.node.frontmatter.category === category
-          }),
-        ],
-      })
-    }
-  }
+  const [category, setCategory] = useState("All posts")
+
+  const handleClick = category => setCategory(category)
+
+  const posts =
+    category === "All posts"
+      ? allPosts
+      : allPosts.filter(post => post.node.frontmatter.category === category)
 
   return (
     <Layout>
       h3llo
       {categories.map((category, i) => {
         return (
-          <button type="button" key={i} onClick={handleClick}>
+          <button type="button" key={i} onClick={() => handleClick(category)}>
             {category}
           </button>
         )
       })}
       <div>
-        {allPosts.map((post, i) => {
+        {posts.map((post, i) => {
           return (
             <Link key={i}>
               <div>{post.node.frontmatter.title}</div>
