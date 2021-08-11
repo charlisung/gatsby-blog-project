@@ -46,5 +46,18 @@ module.exports = {
         shortname: `slpgatsby`,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `SLP Bell`,
+        short_name: `SLP🔔`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#35a353;`,
+        display: `standalone`,
+        icon: `src/images/icon.png`,
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
 }

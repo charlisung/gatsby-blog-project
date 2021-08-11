@@ -19,6 +19,8 @@
     "gatsby-plugin-disqus": "^1.2.2",
     "gatsby-plugin-image": "^1.11.0",
     "gatsby-plugin-lodash": "^4.11.0",
+    "gatsby-plugin-manifest": "^3.11.0",
+    "gatsby-plugin-offline": "^4.11.0",
     "gatsby-plugin-sharp": "^3.11.0",
     "gatsby-remark-lazy-load": "^1.0.2",
     "gatsby-source-filesystem": "^3.11.0",
