@@ -1,7 +1,7 @@
 import { graphql, Link } from "gatsby"
 import React, { useState } from "react"
 import Layout from "../../components/Layout"
-// import BlogItems from "../../templates/blog-posts-page"
+import * as styles from "../../styles/blog.module.css"
 
 const Blog = ({ data }) => {
   const allPosts = data.allMarkdownRemark.edges
@@ -29,24 +29,31 @@ const Blog = ({ data }) => {
 
   return (
     <Layout>
-      h3llo
-      {categories.map((category, i) => {
-        return (
-          <button type="button" key={i} onClick={() => handleClick(category)}>
-            {category}
-          </button>
-        )
-      })}
-      <div>
-        {posts.map((post, i) => {
+      <div className={styles.category}>
+        {categories.map((category, i) => {
           return (
-            <Link key={i}>
-              <div>{post.node.frontmatter.title}</div>
-            </Link>
+            <button type="button" key={i} onClick={() => handleClick(category)}>
+              {category}
+            </button>
           )
         })}
       </div>
-      {/* <BlogItems items={data} /> */}
+      <div className={styles.posting}>
+        {posts.map((post, i) => {
+          return (
+            <div className={styles.posts}>
+              <Link
+                to={`/${post.node.fields.slug}`}
+                key={i}
+                className={styles.card}
+              >
+                <h3>{post.node.frontmatter.title}</h3>
+                <p>{post.node.frontmatter.date}</p>
+              </Link>
+            </div>
+          )
+        })}
+      </div>
     </Layout>
   )
 }

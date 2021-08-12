@@ -1,10 +1,19 @@
-.card {
-  display: flex;
-  align-items: center;
-  margin-bottom: 2rem;
-  color: #343a40;
-  padding: 0 10px;
-  border-left: 1px solid white;
+.category {
+  text-align: center;
+  margin: 30px 0 50px 0;
+}
+.posting {
+  margin: 0 auto;
+  max-width: 700px;
+}
+.posts {
+  margin-top: 15px;
+  padding-left: 20px;
+  border-left: 1px solid transparent;
+}
+
+.posts:hover {
+  border-left: 1px solid #35a354;
 }
 
 .card p {
@@ -14,20 +23,6 @@
 
 .card h3 {
   font-weight: 500;
-}
-
-.card:hover {
-  border-left: 1px solid #35a354;
-}
-.thumbnail {
-  width: 100px;
-  height: 100px;
-  margin-right: 2rem;
-}
-
-.categories {
-  text-align: center;
-  margin: 50px 0;
 }
 
 button {
@@ -41,5 +36,30 @@ button {
 }
 
 button:hover {
-  box-shadow: 5px 5px #1b1d25;
+  box-shadow: 2px 2px #21232b;
+}
+
+@media screen and (min-width: 620px) {
+  button {
+    font-size: 1.2rem;
+    padding: 6px 12px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .posts {
+    margin-top: 40px;
+  }
+
+  .card p {
+    font-size: 1.3rem;
+  }
+
+  .card h3 {
+    font-weight: 500;
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
 }
