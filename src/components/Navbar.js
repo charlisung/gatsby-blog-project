@@ -29,8 +29,8 @@ export default function Navbar() {
         </h2>
         <div className="links">
           <Link to="/about">About</Link>
-          <Link to="/blog">blogs</Link>
-          <Link to="/projects">Projects</Link>
+          <Link to="/blog">Blog</Link>
+          <Link to="/projects">Worksheets</Link>
           <Link to="/tags">Tags</Link>
         </div>
       </div>

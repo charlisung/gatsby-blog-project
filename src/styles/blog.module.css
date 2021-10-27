@@ -16,6 +16,18 @@
   border-left: 1px solid #35a354;
 }
 
+.card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.thumbnail {
+  width: 100px;
+  height: 100px;
+  margin-right: 2rem;
+}
+
 .card p {
   color: rgb(98, 95, 95);
   margin-top: 4px;

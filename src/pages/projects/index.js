@@ -7,7 +7,6 @@ import { getSlug } from "../../utils/getSlug"
 
 const ProjectIndex = ({ data }) => {
   const allPosts = data.allMarkdownRemark.edges
-
   const emptyQuery = ""
 
   const [state, setState] = useState({
@@ -61,7 +60,6 @@ const ProjectIndex = ({ data }) => {
               {node.frontmatter.thumb.childImageSharp && (
                 <Img fluid={node.frontmatter.thumb.childImageSharp.fluid} />
               )}
-
               <h2> {node.frontmatter.title} </h2>
               <div>
                 {node.frontmatter.tags.map(tag => (
@@ -81,7 +79,7 @@ const ProjectIndex = ({ data }) => {
 export default ProjectIndex
 
 export const pageQuery = graphql`
-  query ProjectsPage {
+  {
     allMarkdownRemark(
       sort: { order: DESC, fields: frontmatter___date }
       filter: { frontmatter: { post: { eq: "project" } } }
@@ -113,3 +111,11 @@ export const pageQuery = graphql`
     }
   }
 `
+
+// thumb {
+//   childImageSharp {
+//     fluid {
+//       ...GatsbyImageSharpFluid
+//     }
+//   }
+// }

@@ -2,9 +2,11 @@ import { graphql, Link } from "gatsby"
 import React, { useState } from "react"
 import Layout from "../../components/Layout"
 import * as styles from "../../styles/blog.module.css"
+import Img from "gatsby-image"
 
 const Blog = ({ data }) => {
   const allPosts = data.allMarkdownRemark.edges
+  console.log(allPosts)
 
   const getCategories = items => {
     let categoryItems = items.map(item => {
@@ -47,8 +49,16 @@ const Blog = ({ data }) => {
                 key={i}
                 className={styles.card}
               >
-                <h3>{post.node.frontmatter.title}</h3>
-                <p>{post.node.frontmatter.date}</p>
+                {post.node.frontmatter.thumb && (
+                  <Img
+                    className={styles.thumbnail}
+                    fluid={post.node.frontmatter.thumb.childImageSharp.fluid}
+                  />
+                )}
+                <div>
+                  <h3>{post.node.frontmatter.title}</h3>
+                  <p>{post.node.frontmatter.date}</p>
+                </div>
               </Link>
             </div>
           )

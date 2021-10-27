@@ -38,10 +38,10 @@ export default function Home({ data }) {
               key={node.id}
               className={styles.newPost}
             >
-              <Img
+              {/* <Img
                 fluid={node.frontmatter.thumb.childImageSharp.fluid}
                 className={styles.thumbnail}
-              />
+              /> */}
               <p> {node.frontmatter.title} </p>
             </Link>
           )
@@ -60,13 +60,6 @@ export const query = graphql`
         node {
           frontmatter {
             title
-            thumb {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
           }
           id
           fields {
