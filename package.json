@@ -14,7 +14,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "gatsby": "^3.11.0",
+    "gatsby": "^4.1.0",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-disqus": "^1.2.2",
     "gatsby-plugin-image": "^1.11.0",
@@ -22,6 +22,7 @@
     "gatsby-plugin-manifest": "^3.11.0",
     "gatsby-plugin-offline": "^4.11.0",
     "gatsby-plugin-sharp": "^3.11.0",
+    "gatsby-remark-external-links": "^0.0.4",
     "gatsby-remark-lazy-load": "^1.0.2",
     "gatsby-source-filesystem": "^3.11.0",
     "gatsby-transformer-remark": "^4.8.0",

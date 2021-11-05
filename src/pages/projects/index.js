@@ -8,7 +8,7 @@ import { getSlug } from "../../utils/getSlug"
 const ProjectIndex = ({ data }) => {
   const allPosts = data.allMarkdownRemark.edges
   const emptyQuery = ""
-
+  console.log(allPosts[0].node.frontmatter.tags)
   const [state, setState] = useState({
     filteredData: [],
     query: emptyQuery,
@@ -62,11 +62,12 @@ const ProjectIndex = ({ data }) => {
               )}
               <h2> {node.frontmatter.title} </h2>
               <div>
-                {node.frontmatter.tags.map(tag => (
-                  <button className={styles.badge}>
-                    <Link to={`/tag/${getSlug(tag)}`}>{tag}</Link>
-                  </button>
-                ))}
+                {node.frontmatter.tags &&
+                  node.frontmatter.tags.map(tag => (
+                    <button className={styles.badge}>
+                      <Link to={`/tag/${getSlug(tag)}`}>{tag}</Link>
+                    </button>
+                  ))}
               </div>
             </Link>
           )

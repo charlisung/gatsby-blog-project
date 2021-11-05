@@ -1,12 +1,21 @@
+:root {
+  --primary: #00896f;
+  --secondary: #b73225;
+  --gray: #343a40;
+  --pink-purle: #fdf7ff;
+  --dark-blue: #0b0051;
+  --blue-blue: #0081cf;
+}
 /* Mobile version */
 
 .home {
   text-align: center;
   padding: 30px 0;
+  margin: 20px 0;
 }
 
 .home h2 {
-  color: #35a353;
+  color: var(--primary);
 }
 
 .profile__img {
@@ -40,10 +49,11 @@ section .newPosts {
   display: flex;
   align-items: center;
   margin: 20px;
+  padding: 10px 0;
 }
 
 .newPost:hover {
-  border-right: 1px solid #35a353;
+  border-right: 3px solid #35a353;
 }
 
 .newPost .thumbnail {

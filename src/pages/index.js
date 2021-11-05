@@ -4,13 +4,16 @@ import * as styles from "../styles/home.module.css"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
+import { stubArray } from "lodash"
 
 export default function Home({ data }) {
   const newPosts = data.allMarkdownRemark.edges
   return (
     <Layout>
       <div className={styles.home}>
-        <h2>Welcome to SLP World</h2>
+        <h2>
+          <span>Welcome to SLP World</span>
+        </h2>
         <div>
           <StaticImage
             className={styles.profile__img}
@@ -38,10 +41,10 @@ export default function Home({ data }) {
               key={node.id}
               className={styles.newPost}
             >
-              {/* <Img
+              <Img
                 fluid={node.frontmatter.thumb.childImageSharp.fluid}
                 className={styles.thumbnail}
-              /> */}
+              />
               <p> {node.frontmatter.title} </p>
             </Link>
           )
@@ -60,6 +63,13 @@ export const query = graphql`
         node {
           frontmatter {
             title
+            thumb {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
           id
           fields {

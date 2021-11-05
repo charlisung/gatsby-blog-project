@@ -26,7 +26,7 @@ export default function About() {
       </div>
       <div className={styles.resume}>
         <h3>My resume</h3>
-        <a href={myResumePdf.pdf.publicURL}>
+        {/* <a href={myResumePdf.pdf.publicURL}>
           <p>
             {myResumePdf.pdf.name} without download <FaFileDownload />
           </p>
@@ -35,7 +35,7 @@ export default function About() {
           <p>
             {myResumePdf.pdf.name} with download <FaCloudDownloadAlt />
           </p>
-        </a>
+        </a> */}
       </div>
     </Layout>
   )

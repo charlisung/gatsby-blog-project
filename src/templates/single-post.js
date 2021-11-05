@@ -6,10 +6,11 @@ import { getSlug } from "../utils/getSlug"
 import { FaTag } from "react-icons/fa"
 import ReactDisqusComments from "react-disqus-comments"
 import LazyLoad from "react-lazy-load"
+import Img from "gatsby-image"
 
 export default function allPostsDetail({ data, pageContext }) {
   const { html, id } = data.markdownRemark
-  const { title, tags, date } = data.markdownRemark.frontmatter
+  const { title, tags, date, thumb } = data.markdownRemark.frontmatter
   const post = data.markdownRemark.frontmatter
   return (
     <Layout className="blog-post">
@@ -17,19 +18,17 @@ export default function allPostsDetail({ data, pageContext }) {
         <h2>{title}</h2>
         <p>{date}</p>
       </div>
-
-      {/* need to figure out featured image... */}
-      {/* <div className={styles.featured}>
-            {
-              featuredImg.childImageSharp.fluid && (
-                <Img fluid={featuredImg.childImageSharp.fluid} />
-              )
-            }
-          </div> */}
       <div
         className={styles.container}
         dangerouslySetInnerHTML={{ __html: html }}
       />
+
+      <div className={styles.featured}>
+        {thumb.childImageSharp.fluid && (
+          <Img fluid={thumb.childImageSharp.fluid} />
+        )}
+      </div>
+
       <div className={styles.tags}>
         <FaTag />
         {tags.map(tag => (
@@ -60,7 +59,7 @@ export const query = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         tags
-        featuredImg {
+        thumb {
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid
