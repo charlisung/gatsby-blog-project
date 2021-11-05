@@ -10,16 +10,16 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    // `gatsby-transformer-remark`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
           {
-            resolve: "gatsby-remark-external-links",
+            resolve: `gatsby-remark-external-links`,
             options: {
-              target: "_blank",
-              rel: "noopener noreferrer",
+              target: `_blank`,
+              rel: `noopener noreferrer`,
             },
           },
         ],
