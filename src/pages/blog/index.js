@@ -6,7 +6,6 @@ import Img from "gatsby-image"
 
 const Blog = ({ data }) => {
   const allPosts = data.allMarkdownRemark.edges
-  console.log(allPosts)
 
   const getCategories = items => {
     let categoryItems = items.map(item => {
