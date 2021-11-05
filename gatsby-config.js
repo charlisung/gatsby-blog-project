@@ -32,13 +32,6 @@ module.exports = {
         path: `${__dirname}/src/projects/`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `data`,
-        path: `${__dirname}/src/data/`,
-      },
-    },
     `gatsby-plugin-lodash`,
     {
       resolve: `gatsby-plugin-disqus`,
